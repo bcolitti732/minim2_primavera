@@ -18,24 +18,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import edu.upc.dsa.kebabsimulator_android.models.API;
 import edu.upc.dsa.kebabsimulator_android.models.SharedPrefManager;
 import edu.upc.dsa.kebabsimulator_android.models.User;
-import edu.upc.dsa.kebabsimulator_android.models.Weapon;
 
 
-import org.json.JSONException;
-import org.json.JSONObject;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import retrofit2.Call;
-
-import android.content.Context;
-import android.content.SharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
     private EditText usernameField;
@@ -63,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         ProgressBar progressBar = findViewById(R.id.progressBar);
         Button button = findViewById(R.id.boton);
-        Button boton2 = findViewById(R.id.boton2);
 
         progressBar.setVisibility(View.INVISIBLE);
 
@@ -138,21 +127,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FormActivity.class);
+                Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
                 startActivity(intent);
             }
         });
-        boton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-
 
     }
 

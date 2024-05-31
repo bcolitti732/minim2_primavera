@@ -6,12 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.PUT;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
-
-
-import android.util.Log;
 
 public interface API {
     String BASE_URL = "http://10.0.2.2:8080/dsaApp/";
@@ -25,11 +20,9 @@ public interface API {
     @POST("users/newUser")
     Call<User> addUser(@Body User user);
 
-    @POST("forms/submit-form")
-    Call<FormResponse> submitForm(@Body FormData formData);
+    @POST("question")
+    Call<FormResponse> submitForm(@Body Question formData);
 
-    @GET("prueba/{userId}/badges")
-    Call<List<Badge>> getUserBadges(@Path("userId") String userId);
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(BASE_URL)
