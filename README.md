@@ -1,0 +1,1 @@
+Funciona tot correctament. La resposta al @POST d'Android es pot veure a la consola de l'IntelIJ. Fet així perquè no interferís amb la base de dades. El boto d'obrir el formulari a Android esta abans d'inicar sessió, pel mateix motiu.
